@@ -8,7 +8,7 @@ streams as a dynamic list.
 
 ## Screenshot
 
-![Example widget](screenshot2.png)
+![Example widget](screenshot.png)
 
 ## Files
 
