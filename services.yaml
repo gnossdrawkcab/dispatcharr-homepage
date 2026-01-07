@@ -1,0 +1,12 @@
+- Dispatcharr:
+    icon: dispatcharr.png
+    href: https://dispatcharr.example.com
+    widget:
+      type: customapi
+      url: http://dispatcharr-proxy:8080/status
+      display: dynamic-list
+      mappings:
+        items: channels
+        name: stream_name
+        label: client_count
+        format: number

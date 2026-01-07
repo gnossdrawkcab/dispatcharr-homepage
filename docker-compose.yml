@@ -1,0 +1,15 @@
+services:
+  dispatcharr-proxy:
+    image: python:3.12-alpine
+    container_name: dispatcharr-proxy
+    command: ["python", "/app/dispatcharr-proxy.py"]
+    environment:
+      - DISPATCHARR_BASE_URL=https://dispatcharr.example.com
+      - DISPATCHARR_USERNAME=your_username
+      - DISPATCHARR_PASSWORD=your_password
+      - DISPATCHARR_STATUS_PATH=/proxy/ts/status
+      - DISPATCHARR_TOKEN_PATH=/api/accounts/token/
+      - DISPATCHARR_REFRESH_PATH=/api/accounts/token/refresh/
+    volumes:
+      - ./dispatcharr-proxy.py:/app/dispatcharr-proxy.py:ro
+    restart: unless-stopped
