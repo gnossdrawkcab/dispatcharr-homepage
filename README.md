@@ -14,7 +14,8 @@ streams as a dynamic list.
 
 ## Usage
 
-1) Set your Dispatcharr URL and credentials in the compose file.
+1) Set your Dispatcharr URL (typically an internal IP) and credentials in the
+   compose file.
 2) Run the proxy container.
 3) Add the `services.yaml` widget block to your Homepage config.
 
@@ -32,5 +33,7 @@ streams as a dynamic list.
 ## Notes
 
 - The proxy listens on `/status` and returns the upstream JSON as-is.
+- For most home labs, use an internal IP for Dispatcharr instead of a public
+  domain.
 - Homepage should be on the same Docker network to reach `dispatcharr-proxy`.
 - Use secrets or an `.env` file for credentials; do not hardcode them in git.

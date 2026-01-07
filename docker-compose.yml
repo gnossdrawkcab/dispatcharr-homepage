@@ -4,7 +4,7 @@ services:
     container_name: dispatcharr-proxy
     command: ["python", "/app/dispatcharr-proxy.py"]
     environment:
-      - DISPATCHARR_BASE_URL=https://dispatcharr.example.com
+      - DISPATCHARR_BASE_URL=http://192.168.1.10:3000
       - DISPATCHARR_USERNAME=your_username
       - DISPATCHARR_PASSWORD=your_password
       - DISPATCHARR_STATUS_PATH=/proxy/ts/status

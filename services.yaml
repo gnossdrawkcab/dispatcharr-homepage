@@ -1,6 +1,6 @@
 - Dispatcharr:
     icon: dispatcharr.png
-    href: https://dispatcharr.example.com
+    href: http://192.168.1.10:3000
     widget:
       type: customapi
       url: http://dispatcharr-proxy:8080/status
